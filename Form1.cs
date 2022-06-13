@@ -52,7 +52,7 @@ namespace WidgetWindows
                     }
                 }
             }
-            richTextBox1.Text = tmpInfo;
+            CPUTemperatur.Text = tmpInfo;
 
             computer.Close();
         }
@@ -91,6 +91,8 @@ namespace WidgetWindows
 
         private void Close_Click(object sender, EventArgs e)
         {
+            SaveUnsavedFile();
+
             this.Close();
         }
 

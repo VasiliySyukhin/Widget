@@ -36,7 +36,6 @@
             this.lbl_Eur = new System.Windows.Forms.Label();
             this.Bts = new System.Windows.Forms.Label();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
-            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
@@ -52,6 +51,7 @@
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.timer2 = new System.Windows.Forms.Timer(this.components);
+            this.CPUTemperatur = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label1
@@ -59,7 +59,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Ebrima", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label1.Location = new System.Drawing.Point(12, 19);
+            this.label1.Location = new System.Drawing.Point(6, 19);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(62, 32);
             this.label1.TabIndex = 0;
@@ -70,7 +70,7 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Ebrima", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label2.Location = new System.Drawing.Point(12, 51);
+            this.label2.Location = new System.Drawing.Point(6, 51);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(60, 32);
             this.label2.TabIndex = 1;
@@ -81,7 +81,7 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Ebrima", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label3.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label3.Location = new System.Drawing.Point(12, 83);
+            this.label3.Location = new System.Drawing.Point(6, 83);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(56, 32);
             this.label3.TabIndex = 2;
@@ -92,7 +92,7 @@
             this.lbl_Usd.AutoSize = true;
             this.lbl_Usd.Font = new System.Drawing.Font("Ebrima", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.lbl_Usd.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.lbl_Usd.Location = new System.Drawing.Point(68, 19);
+            this.lbl_Usd.Location = new System.Drawing.Point(63, 19);
             this.lbl_Usd.Name = "lbl_Usd";
             this.lbl_Usd.Size = new System.Drawing.Size(56, 32);
             this.lbl_Usd.TabIndex = 3;
@@ -103,7 +103,7 @@
             this.lbl_Eur.AutoSize = true;
             this.lbl_Eur.Font = new System.Drawing.Font("Ebrima", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.lbl_Eur.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.lbl_Eur.Location = new System.Drawing.Point(68, 51);
+            this.lbl_Eur.Location = new System.Drawing.Point(63, 51);
             this.lbl_Eur.Name = "lbl_Eur";
             this.lbl_Eur.Size = new System.Drawing.Size(56, 32);
             this.lbl_Eur.TabIndex = 4;
@@ -114,7 +114,7 @@
             this.Bts.AutoSize = true;
             this.Bts.Font = new System.Drawing.Font("Ebrima", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.Bts.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.Bts.Location = new System.Drawing.Point(68, 83);
+            this.Bts.Location = new System.Drawing.Point(63, 83);
             this.Bts.Name = "Bts";
             this.Bts.Size = new System.Drawing.Size(56, 32);
             this.Bts.TabIndex = 5;
@@ -123,19 +123,6 @@
             // backgroundWorker1
             // 
             this.backgroundWorker1.DoWork += new System.ComponentModel.DoWorkEventHandler(this.backgroundWorker1_DoWork);
-            // 
-            // richTextBox1
-            // 
-            this.richTextBox1.BackColor = System.Drawing.Color.White;
-            this.richTextBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.richTextBox1.Enabled = false;
-            this.richTextBox1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.richTextBox1.Location = new System.Drawing.Point(12, 136);
-            this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.None;
-            this.richTextBox1.Size = new System.Drawing.Size(112, 132);
-            this.richTextBox1.TabIndex = 6;
-            this.richTextBox1.Text = "";
             // 
             // timer1
             // 
@@ -278,12 +265,24 @@
             this.timer2.Enabled = true;
             this.timer2.Tick += new System.EventHandler(this.timer2_Tick);
             // 
+            // CPUTemperatur
+            // 
+            this.CPUTemperatur.AutoSize = true;
+            this.CPUTemperatur.Font = new System.Drawing.Font("Ebrima", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.CPUTemperatur.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.CPUTemperatur.Location = new System.Drawing.Point(11, 135);
+            this.CPUTemperatur.Name = "CPUTemperatur";
+            this.CPUTemperatur.Size = new System.Drawing.Size(80, 15);
+            this.CPUTemperatur.TabIndex = 22;
+            this.CPUTemperatur.Text = "Temperatura";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(55)))), ((int)(((byte)(55)))));
             this.ClientSize = new System.Drawing.Size(247, 450);
+            this.Controls.Add(this.CPUTemperatur);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.Date);
@@ -295,7 +294,6 @@
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.richTextBox1);
             this.Controls.Add(this.Bts);
             this.Controls.Add(this.lbl_Eur);
             this.Controls.Add(this.lbl_Usd);
@@ -321,7 +319,6 @@
         private Label lbl_Eur;
         private Label Bts;
         private System.ComponentModel.BackgroundWorker backgroundWorker1;
-        private RichTextBox richTextBox1;
         private System.Windows.Forms.Timer timer1;
         private TextBox textBox1;
         private OpenFileDialog openFileDialog1;
@@ -337,5 +334,6 @@
         private Label label6;
         private Label label7;
         private System.Windows.Forms.Timer timer2;
+        private Label CPUTemperatur;
     }
 }
